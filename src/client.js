@@ -2,7 +2,7 @@
 
 const FetchMock = require('./fetch-mock');
 const statusTextMap = require('./status-text');
-const theGlobal = typeof window !== 'undefined' ? window : self;
+const theGlobal = (1, eval)('this')
 
 FetchMock.global = theGlobal;
 FetchMock.statusTextMap = statusTextMap;
